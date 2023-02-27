@@ -1,0 +1,18 @@
+.form {
+    position: relative;
+}
+
+.form__search {
+    width: 468px;
+    height: 48px;
+    border-radius: 24px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.form__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+}

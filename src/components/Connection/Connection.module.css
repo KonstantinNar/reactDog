@@ -1,0 +1,38 @@
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.column__title {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.column__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.column__number {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.column__email {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.column__social {
+    display: flex;
+    gap: 12px;
+}
+
+.column__img {
+    opacity: 0.4;
+}

@@ -1,0 +1,11 @@
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.column__copyright {
+    font-weight: 400;
+    font-size: 9px;
+    line-height: 12px;
+    opacity: 0.4;
+}

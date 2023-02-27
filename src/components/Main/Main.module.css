@@ -1,0 +1,10 @@
+.main {
+    flex: 1;
+    padding: 20px 0;
+}
+
+.main__body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
