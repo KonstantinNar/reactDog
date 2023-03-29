@@ -20,10 +20,19 @@
     display: flex;
     right: 10px;
     top: 10px;
+    fill: transparent;
+    stroke-width: 2px;
+    stroke: black;
+
 }
 
-.card__like {
+.card__favorite_btn:hover {
+    stroke: red;
+}
+
+.card__favorite_btn_active {
     fill: red;
+    stroke: red;
 }
 
 .card__discount_body {
