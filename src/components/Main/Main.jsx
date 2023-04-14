@@ -1,8 +1,16 @@
 import { Crad } from '../Card/Card'
 import s from './Main.module.css'
 import { getIssues } from '../../utils/utils'
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext'
+import { CardsContext } from '../../context/CardsContext'
+import { Sort } from '../Sort/Sort'
 
-export const Main = ({ cards, currentUser, hendleProductLike, search }) => {
+export const Main = () => {
+
+    const { currentUser } = useContext(UserContext)
+    const { cards, search } = useContext(CardsContext)
+
     return (
         <div className={s.main}>
             <div className="container">
@@ -20,9 +28,10 @@ export const Main = ({ cards, currentUser, hendleProductLike, search }) => {
                         {currentUser.name && <span>{currentUser.name}: {currentUser.about}</span>}
                     </div>
                 </div>
+                <Sort />
                 <div className={s.main__body}>
                     {cards.map((item) => (
-                        <Crad {...item} key={item.id} product={item} currentUser={currentUser} hendleProductLike={hendleProductLike} />
+                        <Crad {...item} key={item._id} product={item} />
                     ))}
 
                 </div>

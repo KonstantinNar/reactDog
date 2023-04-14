@@ -2,8 +2,12 @@ import s from './Nav.module.css'
 import favorites from '../../image/icon/header__favorites.svg'
 import cart from '../../image/icon/header__cart.svg'
 import profile from '../../image/icon/header__profile.svg'
+import { useContext } from 'react'
+import { UserContext } from '../../context/UserContext'
 
-export const Nav = ({ hendleUpdateUser }) => {
+export const Nav = () => {
+
+    const { hendleUpdateUser } = useContext(UserContext)
 
     const hendleClickButtonEdit = (e) => {
         e.preventDefault();

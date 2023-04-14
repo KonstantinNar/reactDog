@@ -23,6 +23,13 @@ class Api {
             headers: this._headers,
         }).then(onResponce);
     }
+
+    getProductById(id) {
+        return fetch(`${this._baseUrl}/products/${id}`, {
+            headers: this._headers,
+        }).then(onResponce);
+    }
+
     getUserInfo() {
         return fetch(`${this._baseUrl}/users/me`, {
             headers: this._headers,
