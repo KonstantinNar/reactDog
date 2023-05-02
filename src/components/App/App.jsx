@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Footer } from '../Footer/Footer';
 import { Header } from '../Header/Header';
 import { Main } from '../Main/Main';
@@ -38,21 +38,23 @@ function App() {
   }
 
   const setSort = (data) => {
-    console.log(data);
+    // eslint-disable-next-line default-case
     switch (data) {
       case 'Популярные': {
         const newCards = cards.sort((a, b) => b.likes.length - a.likes.length)
         return setCards([...newCards])
       }
+
       case 'Новинки': {
         const newCards = cards.sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
-        console.log(newCards);
         return setCards([...newCards])
       }
+
       case "Сначала дорогие": {
         const newCards = cards.sort((a, b) => b.price - a.price)
         return setCards([...newCards])
       }
+
       case "Сначала дешёвые": {
         const newCards = cards.sort((a, b) => a.price - b.price)
         return setCards([...newCards])
